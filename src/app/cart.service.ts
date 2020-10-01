@@ -14,6 +14,12 @@ export class CartService {
     this.items.push(product);
   }
 
+  dropFromCart(product) {
+    let produtoDeletar = this.items.indexOf(product);
+    this.items.splice(produtoDeletar,1);
+    return this.items;
+  }
+
   getItems() {
     return this.items;
   }
